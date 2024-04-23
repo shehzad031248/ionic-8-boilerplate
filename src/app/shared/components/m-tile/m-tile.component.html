@@ -1,8 +1,6 @@
 <div class="container ion-no-margin">
-  <div class="img-container"
-    [ngClass]="{ 'border-gradient': live,'active': active }">
-    <img
-      [ngClass]="{ 'img-border': live}"
+  <div class="img-container border-gradient">
+    <img class="img-border"
       src="{{ avatar }}"
       onerror="this.src='assets/images/user-avatar.svg'" />
     <i></i>

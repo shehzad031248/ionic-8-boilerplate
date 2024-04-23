@@ -1,1 +1,13 @@
 @import url('../../assets/scss/m-global.scss');
+
+.parent {
+    display: grid;
+    font-size: 0;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.child {
+    flex-grow: 1;
+    height: auto;
+    margin-bottom: 0;
+}

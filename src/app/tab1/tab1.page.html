@@ -7,19 +7,25 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col class="ion-padding-vertical">
-        @for (user of users; track user) {
-        <m-tile
-          [avatar]="user.userPicture"
-          [name]="user.userName"
-          [live]="!user.seen"
-          [active]="user.active" />
-        } @empty {
-        Empty list of users
-        }
-      </ion-col>
+
     </ion-row>
   </ion-grid>
+  <div class="parent-wrapper">
+    <div class="parent">
+
+      @for (user of users; track user) {
+      <div class="child">
+        <m-tile
+          [avatar]="user.userPicture"
+          [name]="user.user"
+          [live]="!user.seen"
+          [active]="user.active" />
+      </div>
+      } @empty {
+      No Dashboard item found
+      }
+    </div>
+  </div>
 </ion-content>
 
 <ion-footer class="ion-no-border">
