@@ -15,3 +15,23 @@
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
+<ion-footer class="ion-no-border">
+  <form [formGroup]="messageForm" (ngSubmit)="submitMessage()">
+    <ion-item lines="none">
+      <ion-input
+        type="text"
+        placeholder="Write your message"
+        formControlName="message"></ion-input>
+      <ion-button
+        slot="end"
+        class="circle-btn"
+        fill="clear"
+        size="small"
+        shape="round"
+        color="primary"
+        type="submit">
+        <ion-icon slot="icon-only" name="paper-plane"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </form>
+</ion-footer>
