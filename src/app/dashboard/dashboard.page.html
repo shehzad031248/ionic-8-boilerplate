@@ -15,11 +15,7 @@
 
       @for (user of users; track user) {
       <div class="child">
-        <m-tile
-          [avatar]="user.userPicture"
-          [name]="user.user"
-          [live]="!user.seen"
-          [active]="user.active" />
+        <m-tile [avatar]="user.userPicture" [name]="user.user" [live]="!user.seen" [active]="user.active" />
       </div>
       } @empty {
       No Dashboard item found
@@ -31,20 +27,8 @@
 <ion-footer class="ion-no-border">
   <form [formGroup]="messageForm" (ngSubmit)="submitMessage()">
     <ion-item lines="none">
-      <ion-input
-        type="text"
-        placeholder="Write your message"
-        formControlName="message" />
-      <ion-button
-        slot="end"
-        class="circle-btn"
-        fill="clear"
-        size="small"
-        shape="round"
-        color="primary"
-        type="submit">
-        <ion-icon slot="icon-only" name="paper-plane"></ion-icon>
-      </ion-button>
+      <ion-input type="text" placeholder="Write your message" formControlName="message" />
+      <m-button></m-button>
     </ion-item>
   </form>
 </ion-footer>
